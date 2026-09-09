@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Leave a message for Yunong Li.">
+
+    <title>Guestbook | Yunong Li</title>
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+    >
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #waline {
+            margin-top: 32px;
+
+            --waline-theme-color: #075a88;
+            --waline-active-color: #183342;
+            --waline-color: #183342;
+            --waline-bg-color: #ffffff;
+            --waline-bg-color-light: #f4faff;
+            --waline-border-color: #dce8ee;
+            --waline-font-size: 16px;
+
+            font-family: Arial, sans-serif;
+        }
+
+        .guestbook-help {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #526570;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="container">
+        <header class="site-header">
+            <a class="brand" href="index.html">Yunong Li</a>
+
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="work-education.html">Work &amp; Education</a>
+                <a href="notes.html">Notes</a>
+                <a href="guestbook.html" aria-current="page">Guestbook</a>
+            </nav>
+        </header>
+
+        <main id="main">
+            <p class="eyebrow">Say hello</p>
+            <h1>Guestbook</h1>
+
+            <p class="page-intro">
+                Feel free to leave a message!
+                All you need is a nickname—no account or email required.
+            </p>
+
+            <p class="guestbook-help">
+                Messages are public. 欢迎留言，填写昵称即可，无需注册。
+            </p>
+
+            <div id="waline"></div>
+
+            <p id="load-status" class="guestbook-help" role="status">
+                Loading guestbook…
+            </p>
+
+            <noscript>
+                <p>Please enable JavaScript to view and leave messages.</p>
+            </noscript>
+        </main>
+
+        <footer class="site-footer">
+            Yunong Li · Mathematics
+        </footer>
+    </div>
+
+    <script type="module">
+        const status = document.getElementById('load-status');
+
+        try {
+            const { init } = await import(
+                'https://unpkg.com/@waline/client@v3/dist/waline.js'
+            );
+
+            init({
+                el: '#waline',
+
+                serverURL: 'https://yunong-guestbook.vercel.app',
+
+                // Keep this value unchanged so existing messages stay together.
+                path: '/guestbook.html',
+
+                lang: 'en',
+
+                // Only a nickname is required.
+                meta: ['nick'],
+                requiredMeta: ['nick'],
+                login: 'disable',
+
+                // Display the latest messages first.
+                commentSorting: 'latest',
+                pageSize: 10,
+
+                // Keep the guestbook focused on text.
+                emoji: false,
+                imageUploader: false,
+                search: false,
+
+                dark: false
+            });
+
+            status.hidden = true;
+        } catch (error) {
+            status.textContent =
+                'The guestbook could not load. Please refresh the page or try again later.';
+            console.error('Guestbook initialization failed:', error);
+        }
+    </script>
+</body>
+</html>
