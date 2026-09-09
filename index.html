@@ -2,264 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yunong Li | Personal Homepage</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', Times, serif, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #66ccff;
-            color: #333;
-        }
-        .container {
-            width: 60%;
-            margin: 0 auto;
-            padding: 18px;
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: center; /* 中心对齐 */
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-        .header img {
-            border-radius: 5px;
-            width: 250px;
-            height: auto;
-            margin-right: 20px;
-        }
-        .header .info {
-            text-align: center;
-        }
-        .header .info h1 {
-            margin: 0;
-            font-size: 32px;
-        }
-        .header .info p {
-            margin: 5px 0;
-            color: #666;
-            font-size: 18px; /* 增大字体 */
-        }
-        /* .social-icons {
-            display: flex;
-            gap: 10px;
-        }
-        .social-icons a {
-            text-decoration: none;
-            color: #333;
-        } */
-        .content {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .content::before {
-            content: "";
-            display: block;
-            height: 60px; /* 根据导航栏的高度调整 */
-            margin-top: -60px; /* 根据导航栏的高度调整 */
-            visibility: hidden;
-        }
-        .content h2 {
-            margin-top: -60px;
-            text-align: center; /* 标题居中 */
-            padding-top: 60px
-        }
-        .education-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .education-item {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 10px;
-            width: 40%;
-        }
-        .education-item h3 {
-            margin-top: 0;
-            color: #007bff;
-        }
-        .education-item p {
-            margin: 10px 0;
-            color: #666;
-        }
-        .courses-container {
-            margin-top: 20px;
-        }
-        .course-item {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 10px 0;
-        }
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background-color: rgba(255, 255, 255, 0); /* 半透明背景 */
-            padding: 10px 0;
-            box-shadow: 0 2px 4px rgba(104, 51, 51, 0.1);
-            position: fixed;
-            top: 0;
-            width: 60%; /* 与 .container 的宽度相当 */
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-        }
-
-        .navbar a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #ee0000;
-        }
-
-        /* .navbar a:hover {
-            text-decoration: underline;
-        } */
-
-        html {
-            scroll-behavior: smooth;
-        }
-        @media (max-width: 768px) {
-            .container {
-                width: 100%;
-                padding: 10px;
-                box-sizing: border-box;
-            }
-            .header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .education-item {
-                width: 100%;
-                margin: 10px 0;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Yunong Li, Ph.D. student in Pure Mathematics at the University of Waterloo, working in number theory.">
+    <title>Home | Yunong Li</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#bio">Biography</a>
-        <a href="#edu">Education</a>
-        <a href="#courses">Courses</a>
-    </div>
+    <div class="container">
+        <header class="site-header">
+            <a class="brand" href="index.html">Yunong Li</a>
 
-    <div id="home" class="container">
-        <div class="header">
-            <img src="images/selfie.jpg" alt="Yunong Li">
-            <div class="info">
-                <h1>Yunong Li</h1>
-                <p>Graduate Student, Mathematics</p>
-                <p>University of Waterloo</p>
-                <p>Email: yunongli40 at gmail dot com</p>
-                <!-- <div class="social-icons">
-                    <a href="#"><img src="path/to/github-icon.png" alt="GitHub" width="24"></a>
-                    <a href="#"><img src="path/to/google-icon.png" alt="Google" width="24"></a>
-                    <a href="#"><img src="path/to/twitter-icon.png" alt="Twitter" width="24"></a>
-                    <a href="#"><img src="path/to/calendar-icon.png" alt="Calendar" width="24"></a>
-                </div> -->
-            </div>
-        </div>
+            <nav aria-label="Main navigation">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="work-education.html">Work &amp; Education</a>
+                <a href="notes.html">Notes</a>
+            </nav>
+        </header>
 
-        <div id="bio" class="content">
-            <h2>Biography</h2>
-            <p>Hi, I'm Yunong Li from Beijing, China. I attended the High School Affiliated with Renmin University from 2013 to 2019 for both middle and high school. 
-                Afterward, I spent my freshman year at UC Davis before transferring to the University of Toronto, where I completed my undergraduate studies in 2024. 
-                I am now planning to pursue my graduate studies at the University of Waterloo. I am majoring in Math and Computer Science, with a strong focus on Math, 
-                and I aim to pursue a Ph.D. in Math in the future, although I am currently enrolled in a Master's program.</p>
-            <p>I have a variety of hobbies. I enjoy playing Rubik's Cubes, pen spinning, and cardistry. I also play many sports, with basketball being my favorite, 
-                but I can play most ball games. I'm an enthusiastic gamer, recently playing games like LOL, Genshin Impact, CS2, KOF (especially KOF97 and KOF15), 
-                Honor of Kings, Crazyracing Kartrider (I prefer the old version over KartRider: Drift), and Minecraft. Additionally, I have an interest in poker, 
-                specifically, Texas Hold 'em. If you share any of these interests, let's play together!</p>
-        </div>
-            
-        <div id="edu" class="content">
-            <h2>Education</h2>
-            <div class="education-container">
-                <div class="education-item">
-                    <h3>University of California, Davis</h3>
-                    <p>Davis, USA</p>
-                    <p>2019-2020</p>
-                    <p><strong>Major:</strong> Math Major</p>
-                    <p><strong>CGPA:</strong> 3.87/4.0</p>
-                    </ul>
+        <main id="main">
+            <section class="profile" aria-labelledby="profile-name">
+                <div>
+                    <p class="eyebrow">Personal homepage</p>
+                    <h1 id="profile-name">Yunong Li</h1>
+
+                    <p class="affiliation">
+                        Ph.D. Student in Pure Mathematics<br>
+                        University of Waterloo
+                    </p>
+
+                    <a class="email" href="mailto:yunongli40@gmail.com">
+                        yunongli40@gmail.com
+                    </a>
                 </div>
-                <div class="education-item">
-                    <h3>University of Toronto</h3>
-                    <p>Toronto, Canada</p>
-                    <p>2020-2024</p>
-                    <p><strong>Degree:</strong> Bachelor of Science</p>
-                    <p><strong>Major:</strong> Mathematics Specialist, CS Major </p>
-                    <p><strong>CGPA:</strong> 3.89/4.0</p>
-                </div>
-            </div>
-        </div>
 
-        <div id="courses" class="content">
-            <h2>Courses</h2>
-            <div class="courses-container">
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat157y1" target="_blank">MAT157</a>, Analysis I, </strong>
-                    <strong></strong>Course Notes</p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat240h1" target="_blank">MAT240</a>, Algebra I, </strong>
-                    <strong></strong>Course Notes</p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat247h1" target="_blank">MAT247</a>, Algebra II, </strong>
-                    <strong></strong>Course Notes</p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat257y1" target="_blank">MAT257</a>, Analysis II, </strong>
-                    <strong></strong> <a href="notes/MAT257.pdf" target="_blank">Course Notes (only second half)</a></p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat347y1" target="_blank">MAT347</a>, Groups, Rings and Fields, </strong>
-                    <strong></strong> <a href="notes/MAT347.pdf" target="_blank">Course Notes (only the last month)</a></p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat327h1" target="_blank">MAT327</a>, Introduction to Topology, </strong>
-                    <strong></strong>Course Notes</p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat267h1" target="_blank">MAT267</a>, Advanced Ordinary Differential Equations, </strong>
-                    <strong></strong> <a href="notes/MAT267.pdf" target="_blank">Course Notes</a></p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat315h1" target="_blank">MAT315</a>, Introduction to Number Theory, </strong>
-                    <strong></strong>Course Notes</p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat344h1" target="_blank">MAT344</a>, Introduction to Combinatorics, </strong>
-                    <strong></strong>Course Notes</p>
-                <p><strong><a href="https://www.math.toronto.edu/~ila/mat1100f2021.html" target="_blank">MAT1100</a>, Algebra I (graduate level), </strong>
-                    <strong></strong> <a href="notes/MAT1100.pdf" target="_blank">Course Notes</a></p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat351y1" target="_blank">MAT351</a>, Partial Differential Equations, </strong>
-                    <strong></strong> <a href="notes/MAT351.pdf" target="_blank">Course Notes</a></p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat354h1" target="_blank">MAT354</a>, Complex Analysis I, </strong>
-                    <strong></strong> <a href="notes/MAT354.pdf" target="_blank">Course Notes</a></p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat357h1" target="_blank">MAT357</a>, Foundations of Real Analysis, </strong>
-                    <strong></strong> <a href="notes/MAT357.pdf" target="_blank">Course Notes</a></p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat367h1" target="_blank">MAT367</a>, Differential Geometry, </strong>
-                    <strong></strong> <a href="notes/MAT367.pdf" target="_blank">Course Notes</a></p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat415h1" target="_blank">MAT415</a>, Algebraic Number Theory, </strong>
-                    <strong></strong> <a href="notes/MAT415.pdf" target="_blank">Course Notes</a></p>
-                <p><strong><a href="https://www.math.utoronto.ca/~ila/mat1210f2023.html" target="_blank">MAT1210</a>, Class Field Theory, </strong>
-                    <strong></strong> <a href="notes/MAT1210.pdf" target="_blank">Course Notes</a></p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat309h1" target="_blank">MAT309</a>, Introduction to Mathematical Logic, </strong>
-                    <strong></strong> Course Notes</p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat417h1" target="_blank">MAT417</a>, Analytic Number Theory, </strong>
-                    <strong></strong> Course Notes</p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat457h1" target="_blank">MAT457</a>, Advanced Real Analysis I, </strong>
-                    <strong></strong> <a href="notes/MAT457.pdf" target="_blank">Course Notes</a></p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat458h1" target="_blank">MAT458</a>, Advanced Real Analysis II, </strong>
-                    <strong></strong> <a href="notes/MAT458.pdf" target="_blank">Course Notes</a></p>
-                <p><strong><a href="https://artsci.calendar.utoronto.ca/course/mat477h1" target="_blank">MAT477</a>, Seminar in Mathematics, </strong>
-                    <strong></strong> Course Notes</p>
-                <p><strong><a href="https://www.math.toronto.edu/~herzig/1101-s23.html" target="_blank">MAT1101</a>, Algebra II (graduate level), </strong>
-                    <strong></strong> <a href="notes/MAT1101.pdf" target="_blank">Course Notes</a></p>
-            </div>
-        </div>
+                <img
+                    class="portrait"
+                    src="images/selfie.jpg"
+                    alt="Yunong Li"
+                    width="220"
+                >
+            </section>
+
+            <section class="biography" aria-labelledby="about-title">
+                <h2 id="about-title">About me</h2>
+
+                <p>
+                    I am a Ph.D. student in Pure Mathematics at the
+                    University of Waterloo, working in number theory
+                    under the supervision of Professor Kevin Hare.
+                </p>
+
+                <p>
+                    Originally from Beijing, China, I attended the
+                    High School Affiliated with Renmin University
+                    before beginning my undergraduate studies at
+                    UC Davis. I later transferred to the University
+                    of Toronto, where I graduated in 2024 with a
+                    Mathematics Specialist and a Computer Science Major.
+                </p>
+
+                <p>
+                    I completed my master’s degree in mathematics at
+                    the University of Waterloo in 2025. After graduation,
+                    I spent a year teaching high school mathematics at
+                    the Haidian campus of Beanstalk International
+                    Bilingual School in Beijing before returning to
+                    Waterloo to begin my Ph.D. in 2026.
+                </p>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            Yunong Li · Mathematics
+        </footer>
     </div>
-
 </body>
 </html>
